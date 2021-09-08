@@ -1,0 +1,56 @@
+// s-basic.scss
+$red : #f00;
+@mixin dis(){
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery{
+    width:1040px; margin:0 auto;
+    h2{
+        text-align: center;
+        color:$red;
+    }
+    div{
+        border:1px solid $red;
+        @include dis;
+        // display: flex;
+        // justify-content: space-between;
+        figure{
+            margin:0;
+            width:32%;
+            overflow:hidden;
+
+            img{width:100%; transition: .5s;}
+            &:hover img{transform: scale(1.3);}
+        }
+    }
+}
+
+// _max768.scss
+// ※언더바 하면 scss파일만 생성
+
+@media (max-width:768px){
+    $red : #00f;
+    .gallery{
+        width:100%; margin:0 auto;
+        h2{
+            text-align: center;
+            color:$red;
+        }
+        div{
+            border:1px solid $red;
+            display: block;
+            justify-content: space-between;
+            figure{
+                margin:0;
+                width:100%;
+                overflow:hidden;
+    
+                img{width:100%; transition: .5s;}
+                &:hover img{transform: scale(1.3);}
+            }
+        }
+    }
+}
+

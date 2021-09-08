@@ -1,0 +1,44 @@
+
+header{
+background: #000;
+padding:20px; color:#fff;
+text-align:center;}
+article{
+    padding:60px;
+}
+article > h2{
+    font-size:5em;
+}
+article > div{
+    white-space: pre-line;
+}
+footer{
+background: rgb(226, 226, 226);
+padding:20px;
+text-align:center;
+}
+
+/*
+ pc(1024px~)
+태블릿(768~1023)
+모바일 가로(480~767)
+모바일 (~480) 
+*/
+
+@media (min-width:1024px){
+    article{background:coral;}
+}
+@media (min-width:768px) and (max-width:1023px){
+    article{background:cornflowerblue;}
+}
+@media (min-width:481px) and (max-width:767px){
+    article{background:darkslategrey;}
+}
+@media (max-width:480px){
+    article{background:darkred;}
+}
+
+@media print{
+    header{display:none;}
+    footer{display:none;}
+}
